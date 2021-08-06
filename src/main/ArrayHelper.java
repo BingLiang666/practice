@@ -71,6 +71,10 @@ public class ArrayHelper {
      */
     public static boolean find(int[] arr, int elem) {
         //TODO: Replace with your code.
+        for (int number : arr) {
+            if (number == elem) {
+                return true;
+            }
         return false;
     }
 
@@ -82,6 +86,13 @@ public class ArrayHelper {
      */
     public static int countOccurrences(int[] arr, int elem) {
         //TODO: Replace with your code.
+        int i = 1;
+        for (int number: arr) {
+            if (number == elem) {
+                return i;
+            }
+            i++;
+        }
         return 0;
     }
 
@@ -95,6 +106,19 @@ public class ArrayHelper {
      * @return true if array has duplicates and false otherwise
      */
     public static boolean hasDuplicates(int[] arr) {
+        //TODO: Replace with your code.
+        int i = 0, j;
+        int len = arr.length;
+        for (i < len) {
+            j = i + 1;
+            for (j < len) {
+                if (arr[i] == arr[j]) {
+                    return true;
+                }
+                j++;
+            }
+            i++;
+        }
         return false;
     }
 
