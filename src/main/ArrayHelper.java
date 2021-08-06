@@ -11,6 +11,9 @@ public class ArrayHelper {
      */
     public static void print(int[] arr) {
         //TODO: Replace with your code.
+        for (int number : arr) {
+            System.out.print (number);
+        } 
     }
 
     /** Returns the sum of all elements of the array
@@ -20,6 +23,7 @@ public class ArrayHelper {
      */
     public static int sum(int[] arr) {
         //TODO: Replace with your code.
+  
         return 0;
     }
 
