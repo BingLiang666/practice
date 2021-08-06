@@ -23,8 +23,11 @@ public class ArrayHelper {
      */
     public static int sum(int[] arr) {
         //TODO: Replace with your code.
-  
-        return 0;
+        int sum = 0;
+        for (int number: arr) {
+            sum += number;
+        }
+        return sum;
     }
 
     /** Returns the product of all elements of the array
@@ -34,7 +37,11 @@ public class ArrayHelper {
      */
     public static int product(int[] arr) {
         //TODO: Replace with your code.
-        return 1;
+        int product = 1;
+        for (int number: arr) {
+            product *= number;
+        }
+        return product;
     }
 
     /**
@@ -46,7 +53,12 @@ public class ArrayHelper {
      */
     public static boolean threshold(int[] arr, int thres) {
         //TODO: Replace with your code.
-        return false;
+        for (int number : arr) {
+            if (number >= thres) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /** Returns true if elem is present in the array and false otherwise
