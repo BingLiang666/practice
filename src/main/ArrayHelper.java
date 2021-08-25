@@ -10,7 +10,6 @@ public class ArrayHelper {
      * @param arr array of integers
      */
     public static void print(int[] arr) {
-        //TODO: Replace with your code.
         for (int number : arr) {
             System.out.print (number + ", ");
         }
