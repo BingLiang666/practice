@@ -11,7 +11,16 @@ public class StringHelper {
      */
     public static int countVowels(String message) {
         //TODO: Replace with your code.
-        return 0;
+        int count = 0;
+        String vowels = "aeiou";
+        for (int i = 0; i < message.length(); i++) {
+            for(int j =0; j < 5; j++) {
+                if (message.charAt(i) == vowels.charAt(j)) {
+                    count++;
+                }
+            }
+        }
+        return count;
     }
 
     /**
@@ -32,6 +41,30 @@ public class StringHelper {
      */
     public static String encrypt(String message, int shift) {
         //TODO: Replace with your code.
+        char encrypted[] = new char[message.length()];
+        char ch;
+        for (int i = 0; i < message.length(); i++) {
+            ch = message.charAt(i);
+            if (!(((ch >= 'a') && (ch <= 'z')) || ((ch >= 'A') && (ch <= 'Z')))) {
+                return null;
+            }
+        }
+        if (shift <= 26) {
+            for(int i = 0; i < message.length(); i++) {
+                ch = message.charAt(i);
+                if ((ch >= 'a') && ch <= 'z') {
+                    encrypted[i] = (char) ('a' + ((ch - 'a' + shift) % 26));
+                } else {
+                    if ('Z' - ch < shift) {
+                        encrypted[i] = (char) (ch - 'Z' - 1 + shift + 'A');
+                    } else {
+                        encrypted[i] = (char) (ch + shift);
+                    }
+                }
+            }
+            String encrypted1 = new String(encrypted);
+            return encrypted1;
+        }
         return null;
     }
 
@@ -42,5 +75,4 @@ public class StringHelper {
         System.out.println("Number of vowels: " + StringHelper.countVowels(s));
         System.out.println("After encrypting: " + StringHelper.encrypt(s, 3));
     }
-
 }

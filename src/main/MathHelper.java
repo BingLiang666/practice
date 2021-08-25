@@ -9,7 +9,11 @@ public class MathHelper {
      */
     public static int arithmeticSeries(int n) {
         //TODO: Replace with your code.
-        return 0;
+        int sum = 0;
+        for (int i = 0; i < n; i++) {
+            sum = sum + i + 1;
+        }
+        return sum;
     }
 
 
@@ -24,6 +28,9 @@ public class MathHelper {
      */
     public static boolean validTriangle(int a, int b, int c) {
         //TODO: Replace with your code.
+        if ((a + b > c) && (a + c > b) && (b + c > a)) {
+            return true;
+        }
         return false;
     }
 
